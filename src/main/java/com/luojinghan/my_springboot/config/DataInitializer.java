@@ -10,9 +10,9 @@ import org.springframework.stereotype.Component;
 /**
  * 数据初始化器 —— 项目启动后自动执行。
  *
- * 因为 H2 是内存数据库，每次重启数据都会消失。
- * 这里在启动时检查：如果 users 表是空的，就塞一条测试用户。
- * 这样每次重启后都能用 admin/123456 登录。
+ * 首次启动时检查：如果 users 表是空的，就插入一条测试用户。
+ * MySQL 数据持久化，即使重启也不会丢失，所以后续启动直接跳过。
+ * 这样首次启动后就能用 admin / 123456 登录。
  *
  * CommandLineRunner：Spring Boot 启动完成后自动调用 run() 方法。
  */

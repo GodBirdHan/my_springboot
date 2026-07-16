@@ -31,3 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# 配置文件含密码，不上传
+application.properties
